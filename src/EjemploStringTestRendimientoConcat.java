@@ -13,9 +13,12 @@ public class EjemploStringTestRendimientoConcat {
             sb.append(a).append(b).append("\n");        // 500 => 0ms, 1000 => 0ms, 10000 => 4ms, 100000 => 19ms
         }
 
+        System.gc(); // Limpia instancias que no se utilizan
+
         long fin = System.currentTimeMillis();
         System.out.println(fin - inicio);
         System.out.println("c = " + c);
         System.out.println("sb = " + sb.toString());
+        System.exit(0);
     }
 }
